@@ -7,26 +7,81 @@
     	font-size:7vw;
         text-decoration:none;
         text-align:center;
-        padding:25px 35px;
+        padding:14px 35px;
         color:white;
   	}
     @media screen and (min-width: 800px) {
       #homeheader{
-      	font-size: 56px;
+      	font-size:56px;
       }
     }
     @media screen and (max-width: 320px) {
       #homeheader{
-      	font-size: 22px;
+      	font-size:22px;
       }
     }
+    
+    .dropbutton{
+    	background-color:#fcccdd;
+        color:white;
+        padding:16px;
+        font-size:16px;
+        border:none;
+        cursor:pointer;
+    }
+    .dropdown{
+    	position:relative;
+    	display:inline-block;
+    }
+    .dropdown-content{
+    	display:none;
+        position:absolute;
+        width:166%;
+        overflow:auto;
+        background-color:#f9f9f9;
+        min-width:160px;
+        box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index:1;
+    }
+    .dropdown-content a{
+    	color:black;
+    	padding:12px 16px;
+    	text-decoration:none;
+    	display:block;
+    }
+    .dropdown-content a:hover
+    {
+    	background-color:#f1f1f1;
+    }
+    .dropdown:hover .dropdown-content{
+    	display:block;
+    }
+    .dropdown:hover .dropbutton{
+    	background-color:#ff96af;
+    }
+    
   </style>
 </head>
 <body>
-  <div style="text-align:center; background-color:pink; padding:10px">
+  
+  <div style="text-align:center; background-color:pink; padding:10px; margin-bottom:3px;">
   	<a href="https://althevia.github.io/ArtPortfolio/homepage.html" id="homeheader">Rose Puff's Art</a>
   </div>
   
+  <div class="dropdown">
+  	<button class="dropbutton">Art Button 1</button>
+    <div class="dropdown-content">
+    	<a href="">Art Page 1</a>
+    	<a href="">Art Page 2</a>
+    </div>
+  </div>
+  <div class="dropdown">
+  	<button class="dropbutton">Art Button 2</button>
+    <div class="dropdown-content">
+    	<a href="">Art Page 3</a>
+    	<a href="">Art Page 4</a>
+    </div>
+  </div>
  
 </body>
 </html>
