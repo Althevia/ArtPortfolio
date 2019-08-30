@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <title>Rose Puff's Art</title>
   <style>
+  	body{margin:0px;}
   	#homeheader{
     	font-size:7vw;
         text-decoration:none;
@@ -21,85 +25,165 @@
       }
     }
     
-    .dropbutton{
-    	background-color:#fcccdd;
-        color:white;
-        padding:16px;
-        font-size:16px;
-        margin-right:2px;
-        border:none;
-        cursor:pointer;
+    .topnav {
+      overflow: hidden;
+      background-color: #fcccdd;
     }
-    .dropdown{
-    	position:relative;
-    	display:inline-block;
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
     }
-    .dropdown-content{
-    	display:none;
-        position:absolute;
-        width:166%;
-        overflow:auto;
-        background-color:#f9f9f9;
-        min-width:160px;
-        box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index:1;
-        text-align:left;
+
+    .active {
+      background-color: #fcccdd;
+      color: white;
     }
-    .dropdown-content a{
-    	color:#ff96af;
-    	padding:12px 16px;
-    	text-decoration:none;
-    	display:block;
+
+    .topnav .icon {
+      display: none;
     }
-    .dropdown-content a:hover
-    {
-    	background-color:#f1f1f1;
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
     }
-    .dropdown:hover .dropdown-content{
-    	display:block;
+
+    .dropdown .dropbtn {
+      font-size: 17px;    
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
     }
-    .dropdown:hover .dropbutton{
-    	background-color:#ff96af;
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
     }
-    
+
+    .dropdown-content a {
+      float: none;
+      color: #ff96af;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .topnav a:hover, .dropdown:hover .dropbtn {
+      background-color: #ff96af;
+      color: white;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+      color: #ff96af;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .topnav.responsive .dropdown {float: none;}
+      .topnav.responsive .dropdown-content {position: relative;}
+      .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
   </style>
 </head>
+
 <body>
   
-  <div style="text-align:center; background-color:pink; padding:10px; margin-bottom:3px;">
+  <div style="text-align:center; background-color:pink; padding:10px; margin-bottom:0px;">
   	<a href="https://althevia.github.io/ArtPortfolio/homepage.html" id="homeheader">Rose Puff's Art</a>
   </div>
   
-  <div style="text-align:left; background-color:#fcccdd; text-align:center;">
-    <div class="dropdown">
-      <button class="dropbutton">Art Button 1</button>
-      <div class="dropdown-content">
-          <a href="">Art Page 1</a>
-          <a href="">Art Page 2</a>
+  <div class="topnav" id="myTopnav">
+  	<div style="background-color:#fcccdd;">
+      <div class="dropdown">
+        <button class="dropbtn">Art Button 1</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Art Button 2</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Art Button 3</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Art Button 4</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
       </div>
     </div>
-    <div class="dropdown">
-      <button class="dropbutton">Art Button 2</button>
-      <div class="dropdown-content">
-          <a href="">Art Page 3</a>
-          <a href="">Art Page 4</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbutton">Art Button 3</button>
-      <div class="dropdown-content">
-          <a href="">Art Page 5</a>
-          <a href="">Art Page 6</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbutton">Art Button 4</button>
-      <div class="dropdown-content">
-          <a href="">Art Page 7</a>
-          <a href="">Art Page 8</a>
-      </div>
-    </div>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
- 
+    
+<script>
+	function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+</script>
 </body>
 </html>
