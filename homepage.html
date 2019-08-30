@@ -7,6 +7,7 @@
   <title>Rose Puff's Art</title>
   <style>
   	body{margin:0px;}
+    
   	#homeheader{
     	font-size:7vw;
         text-decoration:none;
@@ -29,31 +30,26 @@
       overflow: hidden;
       background-color: #fcccdd;
     }
-
     .topnav a {
       float: left;
       display: block;
-      color: #f2f2f2;
+      color: white;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
       font-size: 17px;
     }
-
     .active {
       background-color: #fcccdd;
       color: white;
     }
-
     .topnav .icon {
       display: none;
     }
-
     .dropdown {
       float: left;
       overflow: hidden;
     }
-
     .dropdown .dropbtn {
       font-size: 17px;    
       border: none;
@@ -64,7 +60,6 @@
       font-family: inherit;
       margin: 0;
     }
-
     .dropdown-content {
       display: none;
       position: absolute;
@@ -73,7 +68,6 @@
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
     }
-
     .dropdown-content a {
       float: none;
       color: #ff96af;
@@ -82,38 +76,35 @@
       display: block;
       text-align: left;
     }
-
     .topnav a:hover, .dropdown:hover .dropbtn {
       background-color: #ff96af;
       color: white;
     }
-
     .dropdown-content a:hover {
       background-color: #f1f1f1;
       color: #ff96af;
     }
-
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 530px) {
       .topnav a:not(:first-child), .dropdown .dropbtn {
         display: none;
       }
       .topnav a.icon {
         float: right;
         display: block;
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
       }
     }
-
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 530px) {
       .topnav.responsive {position: relative;}
       .topnav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
-        
+        box-shadow:none;
       }
       .topnav.responsive a {
         float: none;
@@ -128,17 +119,19 @@
         text-align: left;
       }
     }
+    
   </style>
 </head>
 
 <body>
   
-  <div style="text-align:center; background-color:pink; padding:10px; margin-bottom:0px;">
+  <div style="text-align:center; background-color:pink; padding:15px; margin-bottom:0px;">
   	<a href="https://althevia.github.io/ArtPortfolio/homepage.html" id="homeheader">Rose Puff's Art</a>
   </div>
   
+  <div style="text-align:center; float:center;">
   <div class="topnav" id="myTopnav">
-  	<div style="background-color:#fcccdd;">
+  	<div>
       <div class="dropdown">
         <button class="dropbtn">Art Button 1</button>
         <div class="dropdown-content">
@@ -163,16 +156,10 @@
           <a href="#">Link 3</a>
         </div>
       </div>
-      <div class="dropdown">
-        <button class="dropbtn">Art Button 4</button>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </div>
+      <a href="#">About Me</a>
     </div>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
   </div>
     
 <script>
